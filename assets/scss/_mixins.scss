@@ -1,0 +1,28 @@
+// ANIMATION
+@mixin base-animation {
+    transition: all 0.3s ease;
+}
+
+// ICONS
+@mixin icon($width, $height, $position) {    
+    width: $width;
+    height: $height;
+    background-position: $position;
+}
+
+// BACKGROUND IMAGE
+@mixin backgroundImage($width, $height, $position, $image) {
+    width: $width;
+    height: $height;
+    background-position: $position;
+    background-image: $image;    
+    background-repeat: no-repeat;    
+}
+
+//RESET LIST
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

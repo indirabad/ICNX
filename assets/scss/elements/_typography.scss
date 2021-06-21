@@ -1,0 +1,72 @@
+h1,
+.h1 {
+    font-size: 32px;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+h2,
+.h2 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+h3,
+.h3 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+h4,
+.h4 {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+h5,
+.h5 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+h6,
+.h6 {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.text-lg {
+    font-size: 1.25rem;
+    line-height: 100%;
+
+    @media (min-width: 768px) {
+        font-size: 1.563rem;
+        line-height: 96%;
+    }
+
+    //.text-lg-blue
+    &-blue {
+        line-height: 125%;
+    }
+}
+
+.text-bold {
+    font-family: $font-base-bold;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.c-primary {
+    color: $c-primary;
+}

@@ -1,0 +1,351 @@
+.disc {
+
+    //.disc__wrapper
+    &__wrapper {
+        background: $bg-orange;
+        overflow: hidden;
+    }
+
+    //.disc__header
+    &__header {
+        padding: 25px 12px;
+        z-index: 1;
+        position: relative;
+        max-width: 1043px;
+
+        @media (min-width: 768px) {
+            padding: 40px 18px 20px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            @include backgroundImage(200%, 227px, left -220px, url('#{$img-folder}bg/smear-orange.png'));
+            margin-left: -255px;
+            top: 0;
+            left: 0;
+
+            @media (min-width: 768px) {
+                width: 110%;
+                background-position: left -170px;
+                margin-left: -225px;
+            }
+
+            @media (min-width: 1200px) {
+                width: 1043px;
+                background-position: left -145px;
+            }
+        }
+
+        ul {
+            @include reset-list;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+
+            @media (min-width: 768px) {
+                justify-content: flex-start;
+            }
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 47px;
+                }
+
+                a {
+                    color: $c-white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    line-height: 92%;
+                    display: flex;
+                    align-items: center;
+                    @include base-animation;
+
+                    span {
+                        margin-right: 10px;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $c-primary;
+
+                        .i-menu {
+                            @include icon(21px, 26px, 0 0);
+                        }
+
+                        .i-reward {
+                            @include icon(21px, 26px, -40px 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //.disc__content
+    &__content {
+        position: relative;
+        display: flex;
+        margin: 0 9px;
+
+        @media (min-width: 768px) {
+            margin: 0 15px;
+        }
+
+        &>* {
+            z-index: 1;
+            position: relative;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            @include backgroundImage(440px, 172px, right top, url('#{$img-folder}bg/smear-white-mobile.png'));
+            background-size: contain;
+            left: 0;
+            top: 6px;
+
+            @media (min-width: 768px) {
+                @include backgroundImage(115%, 466px, left top, url('#{$img-folder}bg/smear-white.png'));
+                top: 20px;
+                left: -57px;
+            }
+
+            @media (min-width: 992px) {
+                width: 100%;
+                top: 40px;
+                left: -30px;
+            }
+
+            @media (min-width: 1200px) {
+                width: 1180px;
+                top: -3px;
+                left: -110px;
+            }
+        }
+
+        &-left {
+            width: 58%;
+
+            @media (min-width: 768px) {
+                width: 47%;
+            }
+        }
+
+        &-right {
+            width: 74%;
+            position: absolute;
+            right: -63px;
+            top: 20px;
+
+            @media (min-width: 768px) {
+                width: 53%;
+                position: initial;
+            }
+
+            img {
+                @media (min-width: 1200px) {
+                    margin-left: -54px;
+                }
+            }
+        }
+
+        //.disc__content-img
+        &-img {
+            img {
+                width: 100%;
+
+                @media (min-width: 1200px) {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    //.disc__img-wrapper
+    &__img-wrapper {
+        padding: 8px 0;
+
+        @media (min-width: 768px) {
+            padding: 28px 0 10px;
+        }
+    }
+
+    //.disc__brand
+    &__brand {
+        display: flex;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            @include backgroundImage(1152px, 859px, left -220px, url('#{$img-folder}bg/smear-white-reverse.png'));
+            margin-left: -266px;
+            margin-top: -44px;
+
+            @media (min-width: 768px) {
+                content: none;
+                margin: 0;
+            }
+        }
+
+        //.disc__brand-list
+        &-list {
+            @include reset-list;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            position: relative;
+            margin: 100px 0;
+
+            @media (min-width: 768px) {
+                margin: 0 10px 0 0;
+                width: 65%;
+            }
+
+            li {
+                margin: auto;
+
+                img {
+                    @media (min-width: 768px) {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        //.disc__brand-img 
+        &-img {
+            img {
+                @media (min-width: 768px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    //.disc__steps
+    &__steps {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 90px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 30px auto 0;            
+        }
+
+        @media (min-width: 1200px) {
+            margin: -45px auto 0;
+        }
+
+        //.disc__steps-item 
+        &-item {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex: 1 1 100%;
+            color: $c-white;
+            margin-bottom: 20px;
+
+            @media (min-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                max-width: 300px;
+                margin-bottom: 0;
+            }
+
+            &:first-of-type {
+                .steps-item__icon {
+                    @media (min-width: 768px) {
+                        margin-bottom: 27px;
+                    }
+                }
+            }
+
+            .steps-item__icon {
+                margin: 0 20px 0 25px;
+
+                @media (min-width: 768px) {
+                    margin: 0 0 35px 0;
+                }
+
+                .i-steps {
+                    @media (min-width: 768px) {
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+            .steps-item__text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                @media (min-width: 768px) {
+                    align-items: center;
+                }
+
+                .i-steps {
+                    margin-bottom: 8px;
+
+                    @media (min-width: 768px) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 110%;
+
+            @media (min-width: 768px) {
+                text-align: center;
+                line-height: 100%;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    //disc__footer
+    &__footer {
+        margin-top: 25px;
+        padding: 30px 0 85px;
+        text-align: center;
+        line-height: 131%;
+
+        @media (min-width: 768px) {
+            border-top: 2px solid $c-white;
+            padding: 47px 0 56px;
+        }
+
+        p {
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (min-width: 768px) {
+                max-width: 575px;
+            }
+        }
+
+        a {
+            color: $c-primary;
+            text-decoration: none;
+            @include base-animation;
+
+            &:hover,
+            &:focus {
+                color: $c-primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}

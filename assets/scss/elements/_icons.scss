@@ -1,0 +1,73 @@
+.i-footer {
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url('#{$img-folder}icons/footer-icons.png');
+}
+
+.i-help {
+    @include icon(30px, 30px, -10px -80px);
+}
+
+.i-youtube {
+    @include icon(50px, 50px, -10px -10px);
+}
+
+.i-vk {
+    @include icon(50px, 50px, -80px -10px);
+}
+
+.i-header {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('#{$img-folder}icons/header-icons.svg');
+}
+
+.i-menu {
+    @include icon(21px, 26px, -80px 0);
+}
+
+.i-reward {
+    @include icon(21px, 26px, -120px 0);
+}
+
+.i-steps {
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url('#{$img-folder}icons/steps-icons.png');
+}
+
+.i-basket {
+    @include icon(91px, 72px, -205px -168px);
+
+    @media (min-width: 768px) {
+        @include icon(175px, 138px, -10px -10px);
+    }
+}
+
+.i-club {
+    @include icon(91px, 72px, -400px -10px);
+
+    @media (min-width: 768px) {
+        @include icon(175px, 138px, -205px -10px);
+    }
+}
+
+.i-present {
+    @include icon(91px, 72px, -400px -102px);
+
+    @media (min-width: 768px) {
+        @include icon(175px, 138px, -10px -168px);
+    }
+}
+
+.i-buy {
+    @include icon(155px, 27px, -205px -260px);
+}
+
+.i-take {
+    @include icon(130px, 21px, -172px -326px);
+}
+
+.i-show {
+    @include icon(142px, 21px, -10px -326px);
+}
